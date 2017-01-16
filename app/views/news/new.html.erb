@@ -1,0 +1,12 @@
+<div class="jumbotron center">
+    <h3>Dodaj news:</h3>
+
+    <%= form_for(@news) do |f| %>
+        <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control' %>
+
+      <%= f.label :content %>
+      <%= f.text_field :content, class: 'form-control' %>
+        <%= f.submit "Dodaj", class: "btn btn-primary" %>
+    <% end %>
+</div>

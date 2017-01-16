@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user = User.find(104)
-50.times do
+5.times do
   content = Faker::Lorem.sentence(5)
-  user.news.create!(content: content)
+  user.news.create!(content: content, header:"Tytuł")
 end
