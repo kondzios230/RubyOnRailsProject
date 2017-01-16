@@ -22,7 +22,9 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
-
+ul {
+  list-style-type: none;
+}
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,18 +35,30 @@ h1 {
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
-  text-align: center;
+   text-align: center;
 }
 
 h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
-  text-align: center;
   font-weight: normal;
   color: #777;
+   text-align: center;
 }
 
+h3{
+   text-align: center;
+}
+#jumbo {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#newsTitle
+{
+  padding-bottom:25px 
+}
 p {
   font-size: 1.1em;
   line-height: 1.7em;

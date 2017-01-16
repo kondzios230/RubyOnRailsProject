@@ -1,0 +1,21 @@
+<li>
+  <div class="jumbotron" id="jumbo">
+    <h3>
+      <%= link_to news.content, news %>
+    </h3>
+    <span class="content"><%= news.content %></span>
+
+    <div class="row" >
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
+
+      </div>
+      <div class="col-md-4">
+        <%= link_to gravatar_for(news.user, size: 25), news.user %>
+          <span class="user"><%= link_to news.user.name, news.user %></span>
+          <%= news.created_at.strftime( "Opublikowano  %m.%d.%Y" ) %>.
+      </div>
+    </div>
+
+</li>

@@ -37,5 +37,11 @@ test "email addresses should be unique" do
     @user.password = @user.password_confirmation = "a" * 5
     assert_not @user.valid?
   end
-
+test "associated news should be destroyed" do
+    @user.save
+    @user.news.create!(content: "Lorem ipsum")
+    assert_difference 'News.count', -1 do
+      @user.destroy
+    end
+  end
 end
