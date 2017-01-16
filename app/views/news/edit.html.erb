@@ -1,11 +1,11 @@
 <div class="jumbotron center">
-    <h3>Dodaj news:</h3>
-      
+    <h3>Edytuj news:</h3>
 
     <%= form_for(@news) do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
       <%= f.text_field :title, class: 'form-control', placeholder: "Dodaj tytuł..." %>
+
+      
       <%= f.text_area :content, class: 'form-control', placeholder: "Treść newsa..."  %>
-      <%= f.submit "Dodaj", class: "btn btn-primary" %>
+        <%= f.submit "Dodaj", class: "btn btn-primary" %>
     <% end %>
 </div>

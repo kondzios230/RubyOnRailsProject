@@ -3,18 +3,28 @@
     <h3>
       <%= link_to news.title, news %>
     </h3>
-    <span class="content"><%= news.content %></span>
+    
+     <% if news.content.length>2000 %>
+        <span class="content"><%= news.content[0,2000]  %> <%= link_to "(...)", news %></span>
+     <% else %>
+        <span class="content"><%= news.content %></span>
+     <% end %>
+   </span>
 
     <div class="row" >
       <div class="col-md-4">
       </div>
       <div class="col-md-4">
-
+       
       </div>
       <div class="col-md-4">
         <%= link_to gravatar_for(news.user, size: 25), news.user %>
           <span class="user"><%= link_to news.user.name, news.user %></span>
-          <%= news.created_at.strftime( "Opublikowano  %m.%d.%Y" ) %>.
+          <%= news.created_at.strftime( "Opublikowano  %m.%d.%Y" ) %>
+           <% if  logged_in? &&( current_user?(news.user) || current_user.admin?)  %>
+            <br/><%= link_to "Usuń", news, method: :delete, data: { confirm: "Jesteś pewny?" } %> |
+            <%= link_to "Edytuj", edit_news_path(news) %> 
+        <% end %>
       </div>
     </div>
 

@@ -1,0 +1,15 @@
+<div class="row" id="comment">
+  <div class="col-md-2">
+    <%= link_to gravatar_for(user_for_comment(coment), size: 25), user_for_comment(coment) %>
+    <%= link_to user_for_comment(coment).name,user_for_comment(coment)%>
+  </div>
+  <div class="col-md-8">
+      <%= coment.content %>
+  </div>
+  <div class="col-md-2">
+        <%= coment.created_at.strftime( "%H:%M %d.%m.%Y" ) %>
+        <% if  logged_in? &&( current_user?(@news.user) || current_user.admin? || current_user == user_for_comment(coment))  %>
+            <%= link_to "Usuń", coment, method: :delete, data: { confirm: "Jesteś pewny?" } %>
+        <% end %>
+  </div>
+</div>

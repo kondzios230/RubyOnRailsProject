@@ -39,7 +39,7 @@ test "email addresses should be unique" do
   end
 test "associated news should be destroyed" do
     @user.save
-    @user.news.create!(content: "Lorem ipsum")
+    @user.news.create!(content: "Lorem ipsum",title:"Lorem")
     assert_difference 'News.count', -1 do
       @user.destroy
     end

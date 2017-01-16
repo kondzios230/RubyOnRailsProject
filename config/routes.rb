@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   
   resources :users
   resources :news
-
+  resources :coments
 end

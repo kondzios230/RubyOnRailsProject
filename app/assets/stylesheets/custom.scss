@@ -52,19 +52,17 @@ h3{
 }
 #jumbo {
   padding-top: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
 }
 
 #newsTitle
 {
-  padding-bottom:25px 
+  padding-bottom:25px
 }
 p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
-
-/* header */
 
 #logo {
   float: left;
@@ -90,15 +88,7 @@ $gray-medium-light: #eaeaea;
   box-sizing:         border-box;
 }
 
-/* miscellaneous */
 
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -135,3 +125,19 @@ input {
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
 }}
+
+.newsContent{
+  text-align: justify;
+  margin-bottom:10px;
+}
+
+#comment
+{
+  padding-top:10px;
+  padding-bottom:10px;
+  border-bottom: 1px solid #000000;
+}
+.commentsList {
+    padding: 0;
+    list-style-type: none;
+}
